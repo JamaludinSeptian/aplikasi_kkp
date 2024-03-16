@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f230f6b-fe21-4594-bef8-4bff55813a28">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="12"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_donatur" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM barang  WHERE idDonatur = $P{id_donatur}]]>
+	</queryString>
+	<field name="idBarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idDonatur" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaDonatur" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idPengelola" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaPengelola" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenisBarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlahBarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="keterangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="384" y="20" width="276" height="27" uuid="a5d8915f-74fc-45e9-b3e3-c455ad41640d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rumah Tahfidz Dataqu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="59" width="336" height="20" uuid="ae02d6ff-caf7-4256-80d3-bc3ae69d6c1a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jl. Cut Nyak Dien, RT.01/RW.09, Des. Kalisapu, Kec.Slawi]]></text>
+			</staticText>
+			<image>
+				<reportElement x="139" y="7" width="206" height="104" uuid="631d3fec-20bf-4952-9e17-6727f5dcfa29"/>
+				<imageExpression><![CDATA["C:\\Users\\Jamaludin Septian\\Documents\\NetBeansProjects\\aplikasi_donatur\\src\\img\\LOGO.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="388" y="79" width="276" height="20" uuid="25a3ad59-6cbf-4032-84f8-bf82987c06e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kab. Tegal, Prov.Jawa Tengah 52416]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="125" width="802" height="1" uuid="83c56553-d990-4393-84ca-e9846dd9d878"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="217" y="16" width="394" height="21" uuid="d55beb9f-7692-4282-b209-0aed0fc18e21"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Pemasukan Barang Rumah Tahfidz Dataqu]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="120" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="112" uuid="06d26f2b-cd93-4c75-94e0-9fd7967d0f28"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="139" y="44" width="26" height="24" uuid="365c9ebb-ded6-4841-9da6-dcf5d4d20c0d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="165" y="44" width="103" height="24" uuid="6422d97d-15fd-4d85-a7f7-358f9d186628"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namaPengelola}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="20" width="120" height="24" uuid="2e669ca3-2604-4cd1-8319-686db857fc92"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pengelola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="20" width="26" height="24" uuid="686215e2-a0d0-450d-8f89-38df8ccadb61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="10" width="90" height="24" uuid="b6f02652-8b1a-400d-8658-4dd38d86b243"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Waktu Cetak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="664" y="10" width="26" height="24" uuid="2995478d-61ea-4b2d-80ee-7c4a80bce5f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="44" width="120" height="24" uuid="d7daea0a-12f2-4852-ad22-9e211d6655d1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pengelola]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="690" y="10" width="48" height="24" uuid="5e211588-dde2-4bb1-8e1f-f06608190dee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="20" width="103" height="24" uuid="c900f64c-2498-4656-8770-63d727033fae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idPengelola}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="88" width="802" height="32" uuid="6004236c-bb0e-47ff-9610-cbb88d5840ec"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="647" y="88" width="112" height="32" uuid="7d6e46e6-6bc3-47a4-85fa-33e161f67591"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="88" width="74" height="32" uuid="a78eeea9-9c53-41dc-b208-b08147674eea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="88" width="65" height="32" uuid="70c48fb0-0efd-4376-9d0d-c17236777926"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="88" width="141" height="32" uuid="6ff4b071-2f00-4482-b62a-8a704f54b1d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Donatur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="88" width="77" height="32" uuid="42d248db-01d3-4d49-93fa-6612d6f7b9af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="88" width="81" height="32" uuid="0c2f6a3d-1f6f-45ca-a4b4-a5e1b5ea4994"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Donatur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="88" width="72" height="32" uuid="37cf7b7c-0fce-4c8d-a690-a4d6dfaae899"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="45" uuid="709c1b31-0fd8-4b35-b648-c4bb6d5eefe5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="20" y="10" width="65" height="20" uuid="317833de-8675-4c29-b9ea-de86c0b73caf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idBarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="10" width="74" height="20" uuid="419bdf4b-a3bf-4762-abe2-2ac304efe183"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="10" width="81" height="20" uuid="8b0c268d-048f-49e7-80de-c8fca32cf738"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idDonatur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="10" width="141" height="20" uuid="ac133bce-dbbf-4fad-b4bd-a00db2c7c631"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namaDonatur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="10" width="77" height="20" uuid="9fdd8e3e-c08a-40fd-95d8-26657a68e513"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jenisBarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="551" y="10" width="72" height="20" uuid="e4615e16-0897-4786-aa77-b1c6f1b32cc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jumlahBarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="647" y="10" width="112" height="20" uuid="2510fe6b-d219-47e8-bd35-e7000179fd3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

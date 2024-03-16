@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="625" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c5ac1dea-acd6-41cb-b23b-634264311eef">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_santri" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     santri.`idSantri` AS santri_idSantri,
+     santri.`namaSantri` AS santri_namaSantri,
+     santri.`ttl` AS santri_ttl,
+     santri.`jk` AS santri_jk,
+     santri.`noHpSantri` AS santri_noHpSantri,
+     santri.`namaWali` AS santri_namaWali,
+     santri.`noHpWali` AS santri_noHpWali,
+     santri.`tglMasuk` AS santri_tglMasuk,
+     santri.`alamat` AS santri_alamat
+FROM
+     `santri` santri
+WHERE
+     idSantri = $P{id_santri}]]>
+	</queryString>
+	<field name="idSantri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaSantri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ttl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noHpSantri" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaWali" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noHpWali" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tglMasuk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="santri_idSantri" class="java.lang.String"/>
+	<field name="santri_namaSantri" class="java.lang.String"/>
+	<field name="santri_ttl" class="java.lang.String"/>
+	<field name="santri_jk" class="java.lang.String"/>
+	<field name="santri_noHpSantri" class="java.lang.String"/>
+	<field name="santri_namaWali" class="java.lang.String"/>
+	<field name="santri_noHpWali" class="java.lang.String"/>
+	<field name="santri_tglMasuk" class="java.lang.String"/>
+	<field name="santri_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="126" splitType="Stretch">
+			<image>
+				<reportElement x="71" y="16" width="141" height="79" uuid="20e323f9-f0fd-4097-9647-a32f18cbbec8"/>
+				<imageExpression><![CDATA["C:\\Users\\Jamaludin Septian\\Documents\\NetBeansProjects\\aplikasi_donatur\\src\\img\\LOGO.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="235" y="68" width="277" height="20" uuid="d6810b49-7377-47d9-9334-3333aa069ab1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Kab. Tegal, Prov.Jawa Tengah 52416]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="55" width="277" height="13" uuid="47c334a1-a839-406c-8827-b837e2fab97a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Cut Nyak Dien, RT.01/RW.09, Des. Kalisapu, Kec.Slawi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="16" width="200" height="27" uuid="083f0029-3850-4c59-8fac-f1ab2cdb8024"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rumah Tahfidz Dataqu]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="114" width="555" height="1" uuid="91dbb1df-f5d1-427d-998c-a0b01c3904be"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="416" splitType="Stretch">
+			<textField>
+				<reportElement x="156" y="72" width="401" height="35" uuid="2611110a-15d5-4dea-8c8d-97835931bcdd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idSantri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="107" width="401" height="35" uuid="5f25ba50-2300-46c2-8b3d-6dfbf1de8d21"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namaSantri}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="146" y="72" width="10" height="35" uuid="6ab4e883-17f7-4062-bf98-a0f6a9c8fcd2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="142" width="401" height="34" uuid="81a52221-7a4e-4aac-a76f-ac7c7221d038"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ttl}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="146" y="107" width="10" height="35" uuid="845ca303-10ff-4744-93ec-6802cb56bc3b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="176" width="401" height="35" uuid="4bcf2db0-92b7-4651-ad39-0d2f6105f4a6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="211" width="401" height="35" uuid="b0ca5c62-a711-4307-b4b6-2c43d484d78b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noHpSantri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="246" width="401" height="37" uuid="49028a64-8d74-4454-a89b-48c691611f58"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namaWali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="281" width="129" height="35" uuid="69bef917-ae52-48b8-bf17-aa48e029985f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No Handphone Wali]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="283" width="401" height="33" uuid="e7a06489-1393-4b33-a293-1fb2e2c45b66"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noHpWali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="316" width="401" height="35" uuid="92275e12-606d-4bcf-a89e-b915538dfc89"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tglMasuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="361" width="247" height="54" uuid="1df08cb3-3ce2-491c-b9ae-c4e95c2e6110"/>
+				<textElement verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="146" y="142" width="10" height="34" uuid="31f47f52-b261-45f0-9d60-c0e76e4ebd1f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="176" width="10" height="35" uuid="f8ff5af5-1afe-4a22-93f9-0174c8101cc4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="211" width="10" height="35" uuid="b4aad988-2507-4477-a186-3a44a29fae14"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="72" width="129" height="35" uuid="e80fa633-9c3f-4bed-ac04-56ab61512c99"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ID Santri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="107" width="129" height="35" uuid="e897c18a-096e-49ec-96ee-1fabe38032fb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Santri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="141" width="129" height="35" uuid="0e95f448-8a27-4a83-bf3b-aa8783fc0886"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tempat dan
+Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="176" width="129" height="35" uuid="e4e945dc-8447-472a-81ff-e7869b0ff807"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="211" width="129" height="35" uuid="aa965cdf-f126-40f6-a430-0f863cb54c07"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No Handphone Santri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="246" width="129" height="35" uuid="3586891d-c225-440b-a666-5425e80378e0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Wali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="316" width="129" height="35" uuid="488187ce-22b7-4475-91de-b7f82d6e5aae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="351" width="129" height="35" uuid="ecc17d2d-ee79-43f5-bff6-e7856eddc4f4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="246" width="10" height="35" uuid="e588c7c1-4a17-492e-be44-c74550859873"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="281" width="10" height="35" uuid="55e36b9c-cd68-4240-8d87-c514687b0e80"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="316" width="10" height="35" uuid="8dacad94-86a0-424c-9a53-f29b83536393"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="351" width="10" height="35" uuid="8e1e1455-d5d3-4b37-8990-4599b1ba6de4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="21" width="394" height="21" uuid="9ef1f5ce-bded-4e72-ac81-927edf488bed"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biodata Lengkap Santri Rumah Tahfidz Dataqu]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
